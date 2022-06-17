@@ -1,5 +1,6 @@
-import Google from '../assets/SignIn/google.png';
 import '../Styles/logStyle.css';
+import LogWithGoogle from './LogWithGoogle';
+import Terms from './Terms';
 
 export default function LogIn(){
     return(
@@ -11,11 +12,14 @@ export default function LogIn(){
             
             {/* Form Start-Here */}
             <div className="row form-conatiner">
+                
                 <div className="col-12 col-md-7 col-lg-6 col-xl-4 col-xxl-4 mx-auto">
                     
                     <p className="mini-text">Login And Go On</p>
                     
                     <form id="signup-form">
+                        
+                        {/* Input Field Start Here */}
                         <div className="input mb-2">
                             <label htmlFor="exampleFormControlInput1" className="form-label">Email</label>
                             <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="e.g. nasirmitul@gmail.com"/>
@@ -24,46 +28,40 @@ export default function LogIn(){
                             <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
                             <input type="password" className="form-control" id="exampleFormControlInput2" placeholder="e.g.  12ABCd3@"/>
                         </div>
+                        {/* Input Field End Here */}
+
+                        {/* Remember Section Start */}
+                        
                         <div className="form-check" id="checkbox-container">
                             <div>
                                 <input  type="checkbox" value="" id="check-tick"/>
                                 <p id="remember-text" >Remember Me</p>
                             </div>
-
                             <a id="forget" href="/">Forget Password?</a>
                         </div>
+                        {/* Remember Section End */}
+                        
+                        {/* LogIn Button */}
                         <div className="button" id="log-in">
                             <a href="/">
                                 <button type="button" className="btn log-button shadow-none w-100">Login</button>
                             </a>
-
                         </div>
+                        
+                        {/* Devider Between LogIn and Google */}
                         <div className="divider">
                             <p></p>
                             <span>or</span>
                             <p></p>
                         </div>
-                        <div className="button" >
-                            <a href="/">
-                                <button type="button" className="btn log-button shadow-none w-100">
-                                    <img src={Google} alt='Google'></img>
-                                    <span>
-                                        Login With Google
-                                    </span>
 
-                                </button>
-                            </a>
-
-                        </div>
+                        <LogWithGoogle/>
+                        
                         <div className="last-text">
-                            <p >
-                                Don’t Have an account?
-                                <a href="http://127.0.0.1:5500/sign%20up.html">Sign Up.</a>
+                            <p >Don't Have an account? <a href="http://127.0.0.1:5500/sign%20up.html">Sign Up.</a>
                             </p>
                         </div>
                     </form>
-                    
-
                 </div>
 
             </div>
@@ -72,13 +70,7 @@ export default function LogIn(){
 
         {/* Devider Line */}
         <div id="divider-line"></div>
-    
-        <footer>
-            <div className="term-condition" >
-                <a href="/" id="term">Terms and Conditions</a>
-                <a href="/" id="policy">Privacy Policy</a>
-            </div>
-        </footer>
+        <Terms/>
     </>
     );
 }
