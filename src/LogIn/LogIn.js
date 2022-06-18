@@ -59,7 +59,7 @@ export default function LogIn(){
                         <LogWithGoogle/>
                         
                         <div className="last-text">
-                            <p >Don't Have an account? <a href="http://127.0.0.1:5500/sign%20up.html">Sign Up.</a>
+                            <p >Don't Have an account? <NavLink to='/SignUp'>Sign Up.</NavLink>
                             </p>
                         </div>
                     </form>
