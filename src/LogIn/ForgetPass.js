@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export default function ForgetPass(){
     return(
         <>
@@ -24,7 +26,7 @@ export default function ForgetPass(){
                             </a>
                         </div>
                         <div className="last-text-forget">
-                            <p >Go back and <a href="/" id="forget-login">Login</a></p>
+                            <p >Go back and <NavLink to="/" id="forget-login">Login</NavLink></p>
                         </div>
                     </form>
                     

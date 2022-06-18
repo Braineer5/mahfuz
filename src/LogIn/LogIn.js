@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import '../Styles/logStyle.css';
 import LogWithGoogle from './LogWithGoogle';
 import Terms from './Terms';
@@ -37,7 +38,7 @@ export default function LogIn(){
                                 <input  type="checkbox" value="" id="check-tick"/>
                                 <p id="remember-text" >Remember Me</p>
                             </div>
-                            <a id="forget" href="/">Forget Password?</a>
+                            <NavLink id='forget' to="/ForgetPass">Forget Password?</NavLink>
                         </div>
                         {/* Remember Section End */}
                         
